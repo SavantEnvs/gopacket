@@ -1,0 +1,8 @@
+project: savantenvs/gopacket
+target: fuzz_tcp_serialize-mined-4a84085
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tcp_serialize-mined-4a84085/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tcp_serialize
+    libfuzzer: true
